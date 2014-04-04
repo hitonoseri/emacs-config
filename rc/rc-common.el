@@ -65,3 +65,18 @@
 (setq default-major-mode 'text-mode)
 
 (set-face-background 'hl-line "#4F4F4F")
+
+
+;;
+;; retitle emacs window
+;;
+(defun frame-retitle (title)
+  (modify-frame-parameters nil
+                           (list (cons 'name
+                                       title))))
+
+;; set a beautiful title bar
+(setq frame-title-format
+      '("%S: " (buffer-file-name
+                "%f"
+                (dired-directory dired-directory "%b"))))

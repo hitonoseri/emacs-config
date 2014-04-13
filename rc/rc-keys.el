@@ -9,6 +9,9 @@
 ;; undo
 (global-set-key (kbd "C-z") 'undo)
 
+;; open file
+(global-set-key (kbd "C-o") 'find-file)
+
 ;; find recent files
 (global-set-key (kbd "C-x f") 'recentf-ido-find-file)
 
